@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Join BrainBrawl Room</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 40px;
+    }
+    h1 {
+        color: #333;
+    }
+    .room-code {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px solid #666;
+        border-radius: 8px;
+        width: 200px;
+        display: inline-block;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .copy-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+    }
+    .playstore-btn {
+        background-color: #2196F3;
+        color: white;
+        border: none;
+    }
+</style>
+</head>
+<body>
+
+<h1>Join BrainBrawl</h1>
+<p>Room Code:</p>
+<input id="roomCode" class="room-code" readonly />
+
+<div>
+    <button class="copy-btn" onclick="copyRoomCode()">Copy Code</button>
+    <button class="playstore-btn" onclick="openPlayStore()">Open in Play Store</button>
+</div>
+
+<script>
+    // Get ?room=XXXX from URL
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("room");
+    if (code) {
+        document.getElementById("roomCode").value = code;
+    }
+
+    function copyRoomCode() {
+        const codeInput = document.getElementById("roomCode");
+        codeInput.select();
+        codeInput.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Room code copied: " + codeInput.value);
+    }
+
+    function openPlayStore() {
+        // Replace with your actual app's Play Store link
+        window.location.href = "https://play.google.com/store/apps/details?id=com.brainbrawl.quizapp";
+    }
+</script>
+
+</body>
+</html>
