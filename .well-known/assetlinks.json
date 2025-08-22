@@ -1,12 +1,13 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.brainbrawl.quizapp",
       "sha256_cert_fingerprints": [
-        "CE:F8:80:73:6E:72:2C:4D:67:5F:61:66:01:31:25:AC:A8:DB:D5:05:FC:32:45:01:31:EE:5E:CB:9F:3C:02:B2",
-        "26:EB:45:C6:37:B8:5C:97:4F:94:11:41:E8:35:D1:37:E3:A6:8C:B2:89:62:B2:DC:41:B6:BF:E7:3E:E7:B7:E8"
+        "CE:F8:80:73:6E:72:2C:4D:67:5F:61:66:01:31:25:AC:A8:DB:D5:05:FC:32:45:01:31:EE:5E:CB:9F:3C:02:B2"
       ]
     }
   }
